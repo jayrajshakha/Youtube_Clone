@@ -1,12 +1,18 @@
-
+import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import Search from './pages/Search'
+import Watch from './pages/Watch'
 
 const App = () => {
   return (
-    <div>
-      <h1 className="text-center font-bold text-2xl p-2 m-2">
-        Jay 
-      </h1>
-    </div>
+      <BrowserRouter>
+        <Routes>
+        <Route path="/search" element={ <Search />} />
+          <Route path="/watch/:id" element={ <Watch /> } />
+          <Route path="/" element={ <Home /> } />
+        </Routes>
+      </BrowserRouter>
   )
 }
 
