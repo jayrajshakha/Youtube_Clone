@@ -118,80 +118,78 @@ const SideBar = () => {
   ];
 
   return (
-    <div className="w-2/12 bg-#212121 pr-5 overflow-auto pb-8 sidebar" >
-       <ul className="flex flex-col bg-#121212  border-gray-500 border-b-2">
-         {
-          !mainLinks.length? null : mainLinks.map((link, index) => {
-             return (
-               <li key={index}
-               className={`pl-6 py-3 hover:bg-zinc-600 ${link.name === 'Home' ? "bg-slate-700" : "" }`}>
-                 <a href="#home" className=" flex items-center gap-5">
-                   {link.icon}
-                   <span className="text-sm tracking-wider">{link.name}</span>
-
-                 </a>
-               </li>
-             );
-           })
-         }
-       </ul>
-       <ul className="flex flex-col bg-#121212  border-gray-500 border-b-2">
-         {
-          !secondaryLinks.length? null : secondaryLinks.map((link, index) => {
-             return (
-               <li key={index}
-               className={`pl-6 py-3 hover:bg-zinc-600 `}>
-                 <a href="#home" className=" flex items-center gap-5">
-                   {link.icon}
-                   <span className="text-sm tracking-wider">{link.name}</span>
-
-                 </a>
-               </li>
-             );
-           })
-         }
-       </ul>
-       <ul className="flex flex-col bg-#121212  border-gray-500 border-b-2">
-          {
-            !subscriptionLinks.length ? null : subscriptionLinks.map((link, index) => (
-                  <li 
-                  className="flex flex-col py-3 pl-6 hover:bg-zinc-600"
-                  key={index}>
-                    <a href="#"
-                    className="flex gap-5 items-center">
-                      {link.icon}
-                      <span className="text-sm tracking-wider">{link.name}</span>
-                    </a>
-
-                  </li>
-            ))
-          }
-       </ul>
-       <ul className="flex flex-col bg-#121212 border-gray-500 border-b-2 ">
-        {
-           !helpLinks.length ? null : helpLinks.map((item, index) => {
-                  return (
-                      <li className="flex flex-col hover:bg-zinc-600 py-3 pl-6"
-                      key={index}>
-                        <a href="#"
-                        className="flex items-center gap-5">
-                          {item.icon}
-                          <span className="text-sm tracking-wider">{item.name}</span>
-                        </a>
-
-                      </li>
-                  )
-           })
-        }
-        
-
-       </ul>
-       <ul className="flex gap-2 flex-wrap text-sm p-4 text-zinc-400">
+    <div className="w-2/12 bg-#212121 pr-5 overflow-auto pb-8 sidebar">
+      <ul className="flex flex-col bg-#121212  border-gray-500 border-b-2">
+        {!mainLinks.length
+          ? null
+          : mainLinks.map((link, index) => {
+              return (
+                <li
+                  key={index}
+                  className={`pl-6 py-3 hover:bg-zinc-600 ${
+                    link.name === "Home" ? "bg-slate-700" : ""
+                  }`}
+                >
+                  <a href="#home" className=" flex items-center gap-5">
+                    {link.icon}
+                    <span className="text-sm tracking-wider">{link.name}</span>
+                  </a>
+                </li>
+              );
+            })}
+      </ul>
+      <ul className="flex flex-col bg-#121212  border-gray-500 border-b-2">
+        {!secondaryLinks.length
+          ? null
+          : secondaryLinks.map((link, index) => {
+              return (
+                <li key={index} className={`pl-6 py-3 hover:bg-zinc-600 `}>
+                  <a href="#home" className=" flex items-center gap-5">
+                    {link.icon}
+                    <span className="text-sm tracking-wider">{link.name}</span>
+                  </a>
+                </li>
+              );
+            })}
+      </ul>
+      <ul className="flex flex-col bg-#121212  border-gray-500 border-b-2">
+        {!subscriptionLinks.length
+          ? null
+          : subscriptionLinks.map((link, index) => (
+              <li
+                className="flex flex-col py-3 pl-6 hover:bg-zinc-600"
+                key={index}
+              >
+                <a href="#" className="flex gap-5 items-center">
+                  {link.icon}
+                  <span className="text-sm tracking-wider">{link.name}</span>
+                </a>
+              </li>
+            ))}
+      </ul>
+      <ul className="flex flex-col bg-#121212 border-gray-500 border-b-2 ">
+        {!helpLinks.length
+          ? null
+          : helpLinks.map((item, index) => {
+              return (
+                <li
+                  className="flex flex-col hover:bg-zinc-600 py-3 pl-6"
+                  key={index}
+                >
+                  <a href="#" className="flex items-center gap-5">
+                    {item.icon}
+                    <span className="text-sm tracking-wider">{item.name}</span>
+                  </a>
+                </li>
+              );
+            })}
+      </ul>
+      <ul className="flex gap-2 flex-wrap text-sm p-4 text-zinc-400">
         {textLinks[0].map((name) => {
           return <li key={name}>{name}</li>;
         })}
       </ul>
-       <ul className="flex gap-2 flex-wrap text-sm p-4 text-zinc-400">
+      <ul className="flex gap-2 flex-wrap text-sm p-4 text-zinc-400">
         {textLinks[1].map((name) => {
           return <li key={name}>{name}</li>;
         })}
@@ -201,10 +199,8 @@ const SideBar = () => {
       <p className="px-4 pt-3 text-sm text-zinc-400">
         This clone is for educational purpose only.
       </p>
-      
     </div>
-  )
+  );
+};
 
-}
-
-export default SideBar
+export default SideBar;
